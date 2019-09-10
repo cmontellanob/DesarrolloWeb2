@@ -1,9 +1,11 @@
 <?php 
-$n=5;
-$r=1;
-for ($i=1;$i<=$n;$i++)
+function factorial ($n)
 {
- $r*=$i;
- }
-echo $r; 
- ?>
+	$r=1;
+	for ($i=1;$i<=$n;$i++)
+	{
+		$r*=$i;
+	}
+	return $r; 
+}
+?>
