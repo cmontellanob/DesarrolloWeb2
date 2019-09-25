@@ -7,8 +7,8 @@ $Nom=$_POST['txtNombres'];
 $Ape=$_POST['txtApellidos'];
 $Ci=$_POST['txtCI'];
 $Cu=$_POST['txtCU'];
-
-$sql="insert into alumnos(nombres,apellidos,cu,ci) values ('$Nom','$Ape','$Cu','$Ci')";
+$id=$_POST['txtid'];
+$sql="update alumnos set nombres='$Nom',apellidos='$Ape',cu='$Cu',ci='$Ci' where id=$id";
 //echo $sql;
 $resultado=$con->query($sql);
 ?>
