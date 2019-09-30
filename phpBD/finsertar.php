@@ -1,3 +1,11 @@
+<?php session_start();
+if (isset($_SESSION['correo']))
+{
+	include ("conexion.php");
+$sql="SELECT id,carrera  from carreras ";
+$resultado=$con->query($sql);
+
+?>	
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +22,24 @@
 		<input type="text" name="txtCI"><br>
 		<label for="txtCU">CU:</label>
 		<input type="text" name="txtCU"><br>
+		<label for="sCarrera">Carrera</label>
+		<select name="sCarrera" id>
+		<?php while ($carreras = $resultado->fetch_assoc())
+		{?>
+			<option value="<?php echo $carreras['id'] ?>"><?php echo $carreras['carrera'] ?></option>
+		<?php }?>
+		
+		</select>		
 		<input type="submit">
 		<form>
 	</form>
+<?php }
+else 
+{
+	echo 'acceso denegado ingrese a <a href="flogin.html"> este enlace para entrar</a>';
+}
+ ?>
+}	
 	
 </body>
 </html>
