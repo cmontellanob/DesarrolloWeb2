@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-10-2019 a las 00:35:21
+-- Tiempo de generación: 16-10-2019 a las 22:55:09
 -- Versión del servidor: 10.1.30-MariaDB
 -- Versión de PHP: 7.2.1
 
@@ -45,7 +45,7 @@ CREATE TABLE `alumnos` (
 INSERT INTO `alumnos` (`id`, `nombres`, `apellidos`, `cu`, `ci`, `fotografia`, `idcarrera`) VALUES
 (1, 'Ruddy', 'Plata Camargo', '111-268', '10376457', '', 0),
 (2, 'Yasser ', 'Quispe Gutierrez', '111-117', '860090', '', 0),
-(3, ' Jhonny Agustin', 'ZuÃ±iga', '35-2755', '7153256', '', 0),
+(3, ' Jhonny Agustin', 'Zuñiga', '35-2755', '7153256', '', 0),
 (4, 'Ariel', 'Pacheco', '35-4469', '13218355', '', 0);
 
 -- --------------------------------------------------------

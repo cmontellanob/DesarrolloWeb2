@@ -13,7 +13,10 @@ $resultado=$con->query($sql);
 	<title>Document</title>
 </head>
 <body>
-	<form action="insertar.php" method="POST">
+	<form action="insertar.php" method="POST" enctype="multipart/form-data"
+>
+		<label for="imgFotografia">Fotografia:</label>
+		<input type="file" name="imgFotografia">
 		<label for="txtNombres">Nombres:</label>
 		<input type="text" name="txtNombres"><br>
 		<label for="txtApellidos">Apellidos:</label>
