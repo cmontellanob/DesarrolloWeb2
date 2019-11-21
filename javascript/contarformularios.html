@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	ingrese sus datos<form id="form1" name="form1" method="post" >
+ nombre   <input name="txtTitulo" type="text" id="txtTitulo"/> <br />
+ Apellido  <input type="text" name="txtAutor"  value="datos de prueba"/><br />
+ direccion<input type="text" name="txtISBN" /><br />
+  Telefono <input type="text" name="txtEditorial" /><br />
+   Email<input type="text" name="txtEdicion" />  <br />
+  <input type="submit" name="button" id="button" value="Enviar" />
+</form>
+<div id="resultado"></div>
+<script type="text/javascript">
+var f=document.forms;
+var l=f.length;
+document.getElementById('resultado').innerHTML='Existen '+l+' formularios en la pagina <br>'+f[0].txtAutor.value;
+</script>
+
+</body>
+</html>

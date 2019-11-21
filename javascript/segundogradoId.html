@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function calcular()
+		{
+			a=parseInt(document.getElementById("a").value);
+			b=parseInt(document.getElementById("b").value);
+			c=parseInt(document.getElementById("c").value);
+			
+			x1=(-b+Math.sqrt(b*b-4*a*c))/2*a;
+			x2=(-b-Math.sqrt(b*b-4*a*c))/2*a;
+			document.getElementById("x1").value=x1;
+			document.getElementById("x2").value=x2;
+				
+		}
+	</script>
+</head>
+<body>
+	<label for="a">a</label><input type="text" id="a" name="a"><br>
+<label for="b">b</label><input type="text" id="b" name="b"><br>
+<label for="c">c</label><input type="text" id="c" name="c"><br>
+<input type="button" value="calcular" onclick="calcular()"><br>
+	<label for="x1" >x1</label><input type="text" id="x1" name="x1"><br>
+<label for="x2"  >x2</label><input type="text" id="x2" name="x2"><br>
+
+	
+</body>
+</html>

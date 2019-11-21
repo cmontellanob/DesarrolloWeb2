@@ -1,0 +1,5 @@
+realizar un programa en javascript que permita introducir mediante cuadros de texto tres valores
+y disponer de un boton cuyo valor dice calcular.
+al presionar el boton calcular  el programa debe colorear de color azul el mayor y verde el menor.
+
+backgroundColor

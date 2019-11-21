@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calcular</title>
+	<script>
+		function calcular()
+		{
+			var a=parseInt(document.getElementById("a").value);
+			var b=parseInt(document.getElementById("b").value);
+			var c=parseInt(document.getElementById("c").value);
+			console.log(a);
+			console.log(b);
+			console.log(c);
+	
+			if(a>b && a>c)
+			{
+				document.getElementById("a").style.color="white";
+				document.getElementById("a").style.backgroundColor="blue";
+
+			}
+			if(b>a && b>c )
+			{
+				document.getElementById("b").style.color="white";
+				document.getElementById("b").style.backgroundColor="blue";
+			}
+			if(c>a && c>b )
+			{
+				document.getElementById("c").style.color="white";
+				document.getElementById("c").style.backgroundColor="blue";
+			}
+			if(a<b && a<c)
+			{
+				document.getElementById("a").style.color="white";
+				document.getElementById("a").style.backgroundColor="green";
+			}
+			if(b<a && b<c)
+			{
+				document.getElementById("b").style.color="white";
+				document.getElementById("b").style.backgroundColor="green";
+			}
+			if(c<a && c<b)
+			{
+				document.getElementById("c").style.backgroundColor="green";
+				document.getElementById("c").style.color="white";
+			}
+
+			s="<select><option>"+a+"</option>";
+			s=s+"<option>"+b+"</option>";
+			s=s+"<option>"+c+"</option></select>";
+
+
+			document.getElementById("select").innerHTML=s;
+
+		}	
+		function limpiar()
+		{
+			a=document.getElementById("a");
+			a.value="";
+			a.style.color="black";
+			a.style.backgroundColor="white";
+			b=document.getElementById("b");
+			b.value="";
+			b.style.color="black";
+			b.style.backgroundColor="white";
+			c=document.getElementById("c");
+			c.value="";
+			c.style.color="black";
+			c.style.backgroundColor="white";
+		}
+	</script>
+	</head>
+	<body>
+		Introducir valores :
+		<input type="text" id="a"><br>
+		<input type="text" id="b"><br>
+		<input type="text" id="c"><br>
+		<input type="button" value="calcular" onclick="calcular()"><br>
+		<input type="button" value="limpiar" onclick="limpiar()"><br>
+		<div id="select"></div>
+
+	</body>
+	</html>
