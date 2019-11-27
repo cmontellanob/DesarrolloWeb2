@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ahorcado</title>
+</head>
+<body>
+	Palabra
+	<input type="text" id="l1" size="1" maxlength="1">
+	<input type="text" id="l2" size="1" maxlength="1">
+	<input type="text" id="l3" size="1" maxlength="1">
+	<input type="text" id="l4" size="1" maxlength="1">
+	<input type="text" id="l5" size="1" maxlength="1">
+	<input type="text" id="l6" size="1" maxlength="1">
+	<input type="text" id="l7" size="1" maxlength="1">
+	<input type="text" id="l8" size="1" maxlength="1">
+	<br>
+	<input type="text" id="txtMensaje">
+	<br>
+	<input type="button" value="confirmar" onclick="comprobarmejorado()">
+	<script>
+		palabra="PROFESOR";
+		nrofallas=7;
+		nrocorrectos=0;
+		function comprobar()
+		{
+			
+			l1=document.getElementById('l1');
+			if (l1.value.length>0)
+				if (l1.value.toUpperCase()==palabra[0])
+					{
+						nrocorrectos++;
+
+					document.getElementById('txtMensaje').value='letra correcta';
+					}
+				else
+				{
+					nrofallas--;
+					document.getElementById('txtMensaje').value='Letra Incorrecta';
+				}		
+			l2=document.getElementById('l2');
+			if (l2.value.length>0)
+				if (l2.value.toUpperCase()==palabra[1])
+				{
+
+						nrocorrectos++;
+					document.getElementById('txtMensaje').value='letra correcta';
+				}
+				else
+				{
+					nrofallas--;
+					document.getElementById('txtMensaje').value='Letra Incorrecta';
+				}
+			l3=document.getElementById('l3');
+			
+			if (l3.value.length>0)
+				if (l3.value.toUpperCase()==palabra[2])
+					{
+						nrocorrectos++;
+				
+						document.getElementById('txtMensaje').value='letra correcta';
+					}
+				else
+				{
+					nrofallas--;
+					document.getElementById('txtMensaje').value='Letra Incorrecta';
+				}
+			
+			l4=document.getElementById('l4');
+			if (l4.value.length>0)
+				if (l4.value.toUpperCase()==palabra[3])
+					{
+					nrocorrectos++;
+				
+					document.getElementById('txtMensaje').value='letra correcta';
+					}
+				else
+				{
+					nrofallas--;
+					document.getElementById('txtMensaje').value='Letra Incorrecta';
+				}
+			l5=document.getElementById('l5');
+			if (l5.value.length>0)
+				if (l5.value.toUpperCase()==palabra[4])
+			
+					{		nrocorrectos++;
+				
+						document.getElementById('txtMensaje').value='letra correcta';
+					}	
+				else
+				{
+					nrofallas--;
+					document.getElementById('txtMensaje').value='Letra Incorrecta';
+				}
+			l6=document.getElementById('l6');
+			if (l6.value.length>0)
+				if (l6.value.toUpperCase()==palabra[5])
+					{		nrocorrectos++;
+					document.getElementById('txtMensaje').value='letra correcta';
+					}
+				else
+				{
+					nrofallas--;
+					document.getElementById('txtMensaje').value='Letra Incorrecta';
+				}
+			l7=document.getElementById('l7');
+			if (l7.value.length>0)
+				if (l7.value.toUpperCase(
+					)==palabra[6])
+				{ 		nrocorrectos++;
+				
+					document.getElementById('txtMensaje').value='letra correcta';
+				}
+				else
+				{
+					nrofallas--;
+					document.getElementById('txtMensaje').value='Letra Incorrecta';
+				}
+			l8=document.getElementById('l8');
+			if (l8.value.length>0)
+				if (l8.value.toUpperCase()==palabra[7])
+				{		nrocorrectos++;
+				
+					document.getElementById('txtMensaje').value='letra correcta';
+				}
+				else
+				{
+					nrofallas--;
+					document.getElementById('txtMensaje').value='Letra Incorrecta';
+				}
+			if (nrofallas==0)
+			{
+				document.getElementById('txtMensaje').value='Perdiste';
+			}
+			if (nrocorrectos==8)
+			{
+				document.getElementById('txtMensaje').value='Ganaste';
+			}
+			
+			
+			
+		}
+		function comprobarmejorado()
+		{
+			for (i=0;i<8;i++)
+			{	
+			valor='l'+(i+1);
+			l=document.getElementById(valor);
+			if (l.value.length>0)
+				if (l.value.toUpperCase()==palabra[i])
+					{
+						nrocorrectos++;
+
+					document.getElementById('txtMensaje').value='letra correcta';
+					}
+				else
+			{
+					nrofallas--;
+					document.getElementById('txtMensaje').value='Letra Incorrecta';
+				}
+			if (nrofallas==0)
+			{
+				document.getElementById('txtMensaje').value='Perdiste';
+			}
+			if (nrocorrectos==8)
+			{
+				document.getElementById('txtMensaje').value='Ganaste';
+			}
+			}
+		}		
+		
+	</script>
+
+</body>
+</html>
