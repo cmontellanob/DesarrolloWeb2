@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		anio=2019;
+		mes=11;
+	</script>
+</head>
+<body>
+	<input type="button" value="<<año" onclik="disminuirmes()">
+	<input type="button" value="<<mes">
+	<input type="button" value="<<actual>>">
+	<input type="button" value="año>>">
+	<input type="button" value="mes>>"><br>
+	<div id="contenido"></div>
+	<script>
+		function disminuirmes()
+		{
+			mes--;
+			refrescar();
+		}
+	</script>
+</body>
+</html>
